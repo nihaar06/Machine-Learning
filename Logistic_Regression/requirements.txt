@@ -1,5 +1,6 @@
-matplotlib.pyplot
+matplotlib
 numpy
 pandas
 scikit-learn
 seaborn
+streamlit
