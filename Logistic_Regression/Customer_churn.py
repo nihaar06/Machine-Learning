@@ -11,8 +11,12 @@ import seaborn as sns
 st.set_page_config("Customer Churn Prediction")
 
 def load_css(file):
-    with open(file) as f:
-        st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
+    try:
+        with open(file) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.warning(f"⚠ CSS file '{file}' not found — loading without custom styles.")
+
 
 load_css('style.css')
 
